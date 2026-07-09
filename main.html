@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    ">
+    
+    <title>Sunny Sunshine</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Sonia Pineda</h1>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="introduction" onclick="showTab(event, 'introduction')">Introduction</button>
+            <button class="tab-button" data-tab="portfolio" onclick="showTab(event, 'portfolio')">Portfolio</button>
+            <button class="tab-button" data-tab="hobbiesart" onclick="showTab(event, 'hobbiesart')">Hobbies & Art</button>
+        </nav>
+    </div>
+
+    <div class="tab-content" id="introduction"> 
+        <h2>About Me &hearts;</h2> 
+        <p>Welcome to my personal website! I'm Sonia.</p>
+    </div>
+
+    <div class="tab-content" id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Here are some of my personal projects...</p>
+    </div>
+
+    <div class="tab-content" id="hobbiesart">
+        <h2>Hobbies & Art</h2>
+        <p>I am big on crafting & art! Here are some below: </p>
+    </div>
+
+    <footer> 
+        <div class="copyright">
+            <p>&copy; &hearts; Made with Love in 2026 &hearts;</p>
+        </div>
+    </footer>
+
+    <script> 
+        function showTab(event, tabName) {
+            console.log("Tab clicked: " + tabName);
+            
+            // Hide all content
+            document.getElementById('introduction').style.display = 'none';
+            document.getElementById('portfolio').style.display = 'none';
+            document.getElementById('hobbiesart').style.display = 'none';
+            
+            // Show selected tab
+            document.getElementById(tabName).style.display = 'block';
+            
+            // Remove 'active' from ALL buttons
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].className = buttons[i].className.replace(' active', '');
+            }
+            
+            // Add 'active' to clicked button
+            event.target.className += ' active';
+        }
+    </script>
+</body>
+</html>
