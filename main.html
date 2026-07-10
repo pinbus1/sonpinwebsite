@@ -58,15 +58,15 @@
         function showTab(event, tabName) {
             console.log("Tab clicked: " + tabName);
             
-            // Hide all content
+            // Hide all content -- change
             document.getElementById('introduction').style.display = 'none';
             document.getElementById('portfolio').style.display = 'none';
             document.getElementById('hobbiesart').style.display = 'none';
             
-            // Show selected tab
+            // Show selected tab -- highlighted by GREEN
             document.getElementById(tabName).style.display = 'block';
             
-            // Remove 'active' from ALL buttons
+            // Remove 'active' from ALL buttons -- removed -- will change 
             var buttons = document.getElementsByClassName('tab-button');
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].className = buttons[i].className.replace(' active', '');
