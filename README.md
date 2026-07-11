@@ -2,7 +2,7 @@
 Personal website to display hobbies, etc. Show who I am is the goal? 
 
 Link to access would be here (pages link for now): 
-(link here when ready)
+(https://pinbus1.github.io/sonpinwebsite/)
 
 
 
